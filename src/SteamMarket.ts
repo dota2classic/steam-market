@@ -660,7 +660,7 @@ class SteamMarket {
     return response.data
   }
 
-  public async cancelSellOrder (listingId: number): Promise<[]> {
+  public async cancelSellOrder (listingId: string): Promise<[]> {
     const response = await this.server.post<[]>(`/removelisting/${listingId}`, {
       sessionid: this.sessionId
     }, {
